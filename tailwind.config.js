@@ -17,6 +17,7 @@ export default {
 
       screens: {
         'xs': '480px',
+        'lg': '900px',
       },
 
       maxWidth: {
@@ -38,16 +39,16 @@ export default {
       },
 
       fontSize: {
-        'xxs': '0.875rem',    // 14px
-        'xs': '1rem',         // 16px
-        'sm': '1.125rem',     // 18px
-        'base': '1.375rem',   // 22px
-        'md': '1.625rem',     // 26px
-        'lg': '2.1875rem',    // 35px
-        'xl': '2.5rem',       // 40px
-        '2xl': '3.125rem',     // 50px
-        '3xl': '5rem',        // 80px
-        '4xl': '6.25rem',     // 100px
+        'xxs': '0.9375rem',   // 15px
+        'xs':  '1.25rem',      // 20px
+        'sm':  '1.5625rem',    // 25px
+        'md':  '1.875rem',     // 30px
+        'lg':  '2.1875rem',    // 35px
+        'xl':  '2.5rem',       // 40px
+        '2xl': '3.125rem',    // 50px
+        '3xl': '3.75rem',     // 60px
+        '4xl': '4.6875rem',   // 75px
+        '5xl': '6.25rem',     // 100px
       },
       
       zIndex: {

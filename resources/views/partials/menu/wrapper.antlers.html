@@ -7,12 +7,19 @@
   x-transition:leave="transition ease-in duration-0"
   x-transition:leave-start="opacity-100"
   x-transition:leave-end="opacity-0"
-  class="bg-white w-full text-md leading-[1.45] pb-20 md:pb-0 mt-45 md:mt-55 lg:mt-28 md:col-span-6 lg:!block">
+  class="bg-white flex flex-col justify-between p-16 pt-52 lg:p-40 lg:pt-32 w-full h-[calc(100vh_-_72px)] lg:h-[calc(100vh_-_130px)] fixed left-0 top-72 lg:top-130">
   <nav>
-    <ul class="flex flex-col lg:w-full lg:grid lg:grid-cols-6 lg:gap-x-20 border-b border-b-black lg:border-none">
+    <ul>
       {{ nav:main }}
-        {{ partial:menu/item }}
+        {{ partial:menu/item-main }}
       {{ /nav:main }}
+    </ul>
+  </nav>
+  <nav>
+    <ul>
+      {{ nav:meta }}
+        {{ partial:menu/item-meta }}
+      {{ /nav:meta }}
     </ul>
   </nav>
 </div>
