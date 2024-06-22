@@ -3,38 +3,20 @@ fields:
   -
     handle: debug
     field:
-      default: false
       type: toggle
       display: Debug
-      icon: toggle
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      replicator_preview: true
-      hide_display: false
+  -
+    handle: css_class
+    field:
+      type: text
+      display: 'CSS Class'
   -
     handle: template
     field:
-      hide_partials: true
-      blueprint: false
       type: template
       display: Template
-      icon: template
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      replicator_preview: true
-      hide_display: false
   -
     handle: layout
     field:
-      hide_partials: true
-      blueprint: false
       type: template
       display: Layout
-      icon: template
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      replicator_preview: true
-      hide_display: false

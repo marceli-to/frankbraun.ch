@@ -15,6 +15,28 @@ tabs:
                 - required
               display: Titel
               localizable: true
+          -
+            handle: page_elements
+            field:
+              type: replicator
+              display: Inhalte
+              sets:
+                main_elements:
+                  display: Hauptelemente
+                  icon: addon-boxes-stack
+                  sets:
+                    editor:
+                      display: Texteditor
+                      icon: text-formatting-markdown
+                      fields:
+                        -
+                          import: editor
+                    teaser:
+                      display: 'Teaser (Startseite)'
+                      icon: text-formatting-image-top
+                      fields:
+                        -
+                          import: teaser
   seo:
     display: SEO
     sections:

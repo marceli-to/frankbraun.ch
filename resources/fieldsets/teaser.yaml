@@ -1,0 +1,39 @@
+title: Teaser
+fields:
+  -
+    handle: image
+    field:
+      max_files: 1
+      container: assets
+      type: assets
+      display: Bild
+      validate:
+        - required
+  -
+    handle: caption
+    field:
+      type: text
+      display: Legende
+      width: 50
+  -
+    handle: show_caption
+    field:
+      type: toggle
+      display: 'Legende anzeigen'
+      width: 50
+  -
+    handle: link
+    field:
+      collections:
+        - pages
+      type: link
+      display: Link
+      validate:
+        - required
+  -
+    handle: text
+    field:
+      type: text
+      display: Text
+      validate:
+        - required

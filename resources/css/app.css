@@ -10,7 +10,37 @@ main {
   @apply flex-1;
 }
 
+main p {
+  @apply mb-20 lg:mb-40;
+}
+
+main p:last-child {
+  @apply mb-0;
+}
+
+main ul {
+  @apply list-disc list-inside m-0 mb-20 lg:mb-40;
+}
+
+main ul p {
+  @apply mb-0 inline;
+}
+
 footer a {
+  @apply underline underline-offset-4 decoration-[0.08em] decoration-azure hover:no-underline;
+}
+
+/* Sites */
+body.privacy section {
+  @apply max-w-4xl
+}
+
+body.privacy h2,
+body.privacy h3 {
+  @apply mb-5 text-sm lg:text-md;
+}
+
+body.privacy a {
   @apply underline underline-offset-4 decoration-[0.08em] decoration-azure hover:no-underline;
 }
 
