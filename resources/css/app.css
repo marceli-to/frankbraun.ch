@@ -10,54 +10,6 @@ main {
   @apply flex-1;
 }
 
-main p {
-  @apply mb-15 md:mb-20
-}
-
-main p:last-child {
-  @apply mb-0;
-}
-
-/* Text */
-h1,
-.text-title {
-  @apply text-2xl md:text-3xl lg:text-4xl leading-[1.1];
-}
-
-h2,
-.text-lead {
-  @apply text-md md:text-xl leading-[1.15] md:leading-[1.125];
-}
-
-.text-subinfo {
-  @apply text-xxs md:text-xs lg:text-sm leading-[1.25];
-}
-
-p.text-subinfo {
-  @apply mb-10 md:mb-15;
-}
-
-em, i {
-  @apply font-gt-light-italic italic;
-}
-
-/* Filters */
-.filter-button {
-  @apply flex justify-between items-center py-1 w-full border-t border-t-black;
-}
-
-.filter-item {
-  @apply flex justify-between py-1 w-full border-t border-t-black hover:font-gt-light-italic hover:italic
-}
-
-/* Order */
-.lg\:pos-1 { @apply lg:order-1; }
-.lg\:pos-2 { @apply lg:order-2; }
-.lg\:pos-3 { @apply lg:order-3; }
-.lg\:pos-4 { @apply lg:order-4; }
-.lg\:pos-5 { @apply lg:order-5; }
-.lg\:pos-6 { @apply lg:order-6; }
-
 /* Helpers */
 .nobr {
   @apply whitespace-nowrap;

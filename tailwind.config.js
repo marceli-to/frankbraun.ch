@@ -2,6 +2,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 export default {
+
   content: [
     './resources/**/*.antlers.html',
     './resources/**/*.antlers.php',
@@ -22,9 +23,18 @@ export default {
         '8xl': '1440px',
       },
 
+      colors: {
+        'mist': '#e6e6e6',
+        'mint': '#73ffbe',
+        'scarlett': '#ff0000',
+        'azure': '#0000ff',
+        'graphite': '#3c3c3c',
+        'teal': '#00be78',
+      },
+
       fontFamily: {
-        'gt-light': ['GTAmericaULt', ...defaultTheme.fontFamily.sans],
-        'gt-light-italic': ['GTAmericaULtIt', ...defaultTheme.fontFamily.sans],
+        'gt-alpina-regular': ['GT-Alpina-Standard-Regular', ...defaultTheme.fontFamily.sans],
+        'gt-alpina-light': ['GT-Alpina-Standard-Light', ...defaultTheme.fontFamily.sans],
       },
 
       fontSize: {

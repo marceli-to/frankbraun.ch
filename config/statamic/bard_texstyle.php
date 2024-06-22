@@ -23,25 +23,15 @@ return [
         //     'cp_badge' => false,
         // ],
 
-        'lead' => [
-          'type' => 'paragraph',
-          'name' => 'Lead',
-          'ident' => 'L',
-          'icon' => null,
-          'class' => 'text-lead',
-          'cp_css' => 'font-size: 2rem; line-height: 1.25; font-weight: 300',
-          'cp_badge' => false,
-        ],
-
-        'subinfo' => [
-          'type' => 'paragraph',
-          'name' => 'Subinfo',
-          'ident' => 'S',
-          'icon' => null,
-          'class' => 'text-subinfo',
-          'cp_css' => 'font-size: .84rem; font-weight: 400',
-          'cp_badge' => false,
-        ],
+        // 'lead' => [
+        //   'type' => 'paragraph',
+        //   'name' => 'Lead',
+        //   'ident' => 'L',
+        //   'icon' => null,
+        //   'class' => 'text-lead',
+        //   'cp_css' => 'font-size: 2rem; line-height: 1.25; font-weight: 300',
+        //   'cp_badge' => false,
+        // ],
 
         'nobr' => [
           'type' => 'span',
