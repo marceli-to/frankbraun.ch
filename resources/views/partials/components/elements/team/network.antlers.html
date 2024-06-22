@@ -1,0 +1,16 @@
+{{ partial:layout/article }}
+  {{ partial:layout/grid }}
+    {{ partial:layout/span class="mb-20 md:mb-0 hyphens-auto" }}
+      {{ text }}
+    {{ /partial:layout/span }}
+    {{ partial:layout/span }}
+      <div class="space-y-10 md:space-y-25">
+        {{ partner_list }}
+          {{ partial:components/elements/text/list_item }}
+            {{ partner }}
+          {{ /partial:components/elements/text/list_item }}
+        {{ /partner_list }}
+      </div>
+    {{ /partial:layout/span }}
+  {{ /partial:layout/grid }}
+{{ /partial:layout/article }}

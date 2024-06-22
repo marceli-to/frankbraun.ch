@@ -1,0 +1,16 @@
+{{ partial:components/media/image 
+  :image="image" 
+  wrapperClass="mb-7 md:mb-10 aspect-[16/10]"
+  class="w-full h-full object-cover"
+  :sizes="['lg']"
+  preset="focal-16-10" }}
+  {{ if has_detail }}
+    <div class="flex items-start">
+      {{ partial:icons/arrow-right-up class="w-12 h-auto mr-10 mt-6 shrink-0" }}
+      {{ description | nl2br }}
+    </div>
+  {{ else }}
+    {{ description }}
+{{ /if }}
+
+

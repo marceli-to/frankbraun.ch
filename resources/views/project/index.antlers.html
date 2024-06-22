@@ -1,0 +1,25 @@
+{{ partial:project/components/filter_list class="hidden md:block" }}
+
+{{ if page_elements }}
+  
+  {{ partial:layout/grid class="space-y-20 md:space-y-0 md:gap-y-20" }}
+
+    {{ page_elements }}
+
+      {{ if type == 'project_teaser_66_33' }}
+        {{ partial:project/components/teaser_66_33 }}
+      {{ /if }}
+      
+      {{ if type == 'project_teaser_33_66' }}
+        {{ partial:project/components/teaser_33_66 }}
+      {{ /if }}
+
+      {{ if type == 'project_teaser_50_50' }}
+        {{ partial:project/components/teaser_50_50 }}
+      {{ /if }}
+
+    {{ /page_elements }}
+
+  {{ /partial:layout/grid }}
+
+{{ /if }}

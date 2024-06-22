@@ -1,0 +1,41 @@
+<div 
+  x-data="{ filterOpen: false }" 
+  class="{{ class }}">
+  {{ partial:components/filter/wrapper }}
+    {{ partial:components/filter/button }}
+      <a 
+        href="javascript:;"
+        x-cloak
+        x-on:click="filterOpen = ! filterOpen" 
+        :class="{ 'font-gt-light-italic italic mb-0': filterOpen === true, 'mb-20 md:mb-35': filterOpen === false }"
+        class="filter-button">
+        <span>Liste</span>
+        <span x-show="!filterOpen">
+          {{ partial:icons/plus class="w-26 h-auto" }}
+        </span>
+        <span x-show="filterOpen">
+          {{ partial:icons/minus class="w-26 h-auto" }}
+        </span>
+      </a>
+    {{ /partial:components/filter/button }}
+
+    {{ partial:components/filter/items }}
+      <div 
+        x-cloak
+        x-show="filterOpen">
+        {{ collection from="projects" as="projects" sort="order" project_type:is="projekte" }}
+          {{ projects }}
+            <li>
+              <a 
+                href="{{ url }}"
+                class="filter-item {{ current_uri == url ? 'font-gt-light-italic italic' : '' }}"
+                title="{{ list_title ?? title }}">
+                {{ list_title ?? title }}
+              </a>
+            </li>
+          {{ /projects }}
+        {{ /collection }}
+      </div>
+    {{ /partial:components/filter/items }}
+  {{ /partial:components/filter/wrapper }}
+</div>

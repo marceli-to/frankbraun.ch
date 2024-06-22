@@ -1,0 +1,19 @@
+{{ partial:project/components/filter_archive }}
+
+{{ partial:layout/grid class="md:gap-y-30" }}
+
+  {{ collection from="projects" as="projects" sort="order" taxonomy:category="{{ category }}" }}
+    {{ projects }}
+      <div class="mb-30 md:mb-0 md:col-span-2">
+        {{ if has_detail }}
+          <a href="{{ url }}">
+            {{ partial:project/components/thumbnail class="flex" }}
+          </a>
+        {{ else }}
+          {{ partial:project/components/thumbnail }}
+        {{ /if }}
+      </div>
+    {{ /projects }}
+  {{ /collection }}
+
+{{ /partial:layout/grid }}

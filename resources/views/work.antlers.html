@@ -1,0 +1,41 @@
+<div 
+  x-data="{ filterOpen: false }">
+  {{ partial:components/filter/wrapper }}
+    {{ partial:components/filter/button }}
+      <a 
+        href="javascript:;"
+        x-cloak
+        x-on:click="filterOpen = ! filterOpen" 
+        :class="{ 'font-gt-light-italic italic mb-0': filterOpen === true, 'mb-20 md:mb-35': filterOpen === false }"
+        class="filter-button">
+        <span>Themen</span>
+        <span x-show="!filterOpen">
+          {{ partial:icons/plus class="w-26 h-auto" }}
+        </span>
+        <span x-show="filterOpen">
+          {{ partial:icons/minus class="w-26 h-auto" }}
+        </span>
+      </a>
+    {{ /partial:components/filter/button }}
+
+    {{ partial:components/filter/items }}
+      <div 
+        x-cloak
+        x-show="filterOpen">
+        {{ nav:topics_work }}
+          <li>
+            <a 
+              href="{{ url }}"
+              class="filter-item {{ is_current || is_parent ? 'font-gt-light-italic italic' : '' }}"
+              title="{{ title }}">
+              {{ title }}
+            </a>
+          </li>
+        {{ /nav:topics_work }}
+      </div>
+    {{ /partial:components/filter/items }}
+  {{ /partial:components/filter/wrapper }}
+</div>
+{{ page_elements }}
+  {{ partial:elements }}
+{{ /page_elements }}

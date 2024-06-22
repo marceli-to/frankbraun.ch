@@ -1,0 +1,10 @@
+title: 'Teaser Aktuell'
+fields:
+  -
+    handle: news_article
+    field:
+      max_items: 1
+      collections:
+        - news
+      type: entries
+      display: Artikel

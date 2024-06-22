@@ -1,0 +1,53 @@
+{{ if type == 'image_text' }}
+  {{ partial:components/elements/image_text }}
+{{ /if }}
+
+{{ if type == 'image_links' }}
+  {{ partial:components/elements/image_links }}
+{{ /if }}
+
+{{ if type == 'single_image' }}
+  {{ partial:components/elements/image/single }}
+{{ /if }}
+
+{{ if type == 'image_container_100' }}
+  {{ partial:components/media/containers/100 :image="image" }}
+{{ /if }}
+
+{{ if type == 'image_container_100' }}
+  {{ partial:components/media/containers/100 :image="image" }}
+{{ /if }}
+
+{{ if type == 'image_container_50_50' }}
+  {{ partial:components/media/containers/50_50 
+    :image_left="image_landscape_left" 
+    :image_right="image_landscape_right" }}
+{{ /if }}
+
+{{ if type == 'image_container_33_66' }}
+  {{ partial:components/media/containers/33_66 
+    :image_left="image_portrait" 
+    :image_right="image_landscape" }}
+{{ /if }}
+
+{{ if type == 'image_container_66_33' }}
+  {{ partial:components/media/containers/66_33 
+    :image_left="image_landscape" 
+    :image_right="image_portrait" }}
+{{ /if }}
+
+{{ if type == 'text' || type == 'text_columns'}}
+  {{ partial:components/elements/text/editor }}
+{{ /if }}
+
+{{ if type == 'team' }}
+  {{ partial:components/elements/team/team }}
+{{ /if }}
+
+{{ if type == 'network' }}
+  {{ partial:components/elements/team/network }}
+{{ /if }}
+
+{{ if type == 'teaser_news' }}
+    {{ partial:components/elements/teaser_news }}
+{{ /if }}
