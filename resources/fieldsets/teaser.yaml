@@ -10,17 +10,17 @@ fields:
       validate:
         - required
   -
+    handle: show_caption
+    field:
+      type: toggle
+      display: 'Bildlegende?'
+  -
     handle: caption
     field:
       type: text
       display: Legende
-      width: 50
-  -
-    handle: show_caption
-    field:
-      type: toggle
-      display: 'Legende anzeigen'
-      width: 50
+      if:
+        show_caption: 'equals true'
   -
     handle: link
     field:

@@ -8,7 +8,9 @@ fields:
   -
     handle: css_class
     field:
-      type: text
+      options:
+        privacy: Impressum/Datenschutz
+      type: select
       display: 'CSS Class'
   -
     handle: template

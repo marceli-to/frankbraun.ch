@@ -1,0 +1,51 @@
+title: Bildcontainer
+fields:
+  -
+    handle: container_type
+    field:
+      options:
+        single: Einzelbild
+        double: '2 Bilder'
+      default: single
+      type: select
+      display: Typ
+  -
+    handle: image
+    field:
+      max_files: 1
+      container: assets
+      type: assets
+      display: Bild
+      if:
+        container_type: 'equals single'
+  -
+    handle: image_left
+    field:
+      max_files: 1
+      container: assets
+      type: assets
+      display: 'Bild links'
+      width: 50
+      if:
+        container_type: 'equals double'
+  -
+    handle: image_right
+    field:
+      container: assets
+      type: assets
+      display: 'Bild rechts'
+      width: 50
+      if:
+        container_type: 'equals double'
+  -
+    handle: show_caption
+    field:
+      type: toggle
+      display: 'Bildlegende?'
+  -
+    handle: caption
+    field:
+      type: text
+      display: Legende
+      if:
+        show_caption: 'equals true'

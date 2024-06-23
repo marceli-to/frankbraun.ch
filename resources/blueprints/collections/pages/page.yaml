@@ -32,11 +32,17 @@ tabs:
                         -
                           import: editor
                     teaser:
-                      display: Teaser
+                      display: Bildteaser
                       icon: text-formatting-image-top
                       fields:
                         -
                           import: teaser
+                    image_container:
+                      display: Bildcontainer
+                      icon: media-image-picture-orientation
+                      fields:
+                        -
+                          import: image_container
   seo:
     display: SEO
     sections:

@@ -6,6 +6,7 @@
 
 [x-cloak] { display: none !important; }
 
+/* Global styles */
 main {
   @apply flex-1;
 }
@@ -30,17 +31,17 @@ footer a {
   @apply underline underline-offset-4 decoration-[0.08em] decoration-azure hover:no-underline;
 }
 
-/* Sites */
-body.privacy section {
+/* Specific styles */
+body.privacy main section {
   @apply max-w-4xl
 }
 
-body.privacy h2,
-body.privacy h3 {
+body.privacy main h2,
+body.privacy main h3 {
   @apply mb-5 text-sm lg:text-md;
 }
 
-body.privacy a {
+body.privacy main a {
   @apply underline underline-offset-4 decoration-[0.08em] decoration-azure hover:no-underline;
 }
 

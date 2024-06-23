@@ -2,16 +2,21 @@
   <a
     href="{{ link }}"
     title="{{ text }}" 
-    class="block lg:px-40 group">
+    class="block lg:px-40 group w-full">
     {{ partial:media/image 
       :image="image" 
       wrapperClass=""
       class="block w-full h-auto"
       :sizes="['2xl', 'xl', 'lg']" }}
-      {{ if text }}
-        <span class="absolute block pt-10 px-16 lg:px-0 underline underline-offset-4 decoration-[0.08em] decoration-mint group-hover:no-underline">
+      <div class="text-graphite pt-10 flex justify-between absolute left-0 lg:left-40 w-full lg:w-[calc(100%_-_80px)]">
+        <span class="block pl-16 lg:pl-0 underline underline-offset-4 decoration-[0.08em] decoration-mint group-hover:no-underline">
           {{ text }} {{ partial:icons/arrow }}
         </span>
-      {{ /if }}
+        {{ if caption }}
+          <span class="hidden lg:block text-xxs pr-16 lg:pr-0">
+            {{ caption }}
+          </span>
+        {{ /if }}
+      </div>
     </a>
 </div>

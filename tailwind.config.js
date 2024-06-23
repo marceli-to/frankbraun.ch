@@ -13,6 +13,7 @@ export default {
   ],
 
   theme: {
+
     extend: {
 
       screens: {
@@ -313,6 +314,7 @@ export default {
       '249': '15.5625rem',
       '250': '15.625rem',
     },
+    
   },
 
   plugins: [
