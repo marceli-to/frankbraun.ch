@@ -1,12 +1,7 @@
 {{ if type == 'teaser' }}
-  teaser
-  {{# {{ partial:components/elements/teaser_news }} #}}
+  {{ partial:elements/page-teaser }}
 {{ /if }}
 
 {{ if type == 'editor' }}
-<div class="max-w-6xl mx-auto pt-16 lg:pt-40">
-  <section class="px-16 lg:px-40">
-    {{ text }}
-  </section>
-</div>
+  {{ partial:elements/editor }}
 {{ /if }}

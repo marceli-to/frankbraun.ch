@@ -32,7 +32,7 @@ tabs:
                         -
                           import: editor
                     teaser:
-                      display: 'Teaser (Startseite)'
+                      display: Teaser
                       icon: text-formatting-image-top
                       fields:
                         -

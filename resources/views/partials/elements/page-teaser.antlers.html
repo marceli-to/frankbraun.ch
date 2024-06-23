@@ -1,0 +1,17 @@
+<div class="max-w-6xl mx-auto relative mb-60 last-of-type:mb-40">
+  <a
+    href="{{ link }}"
+    title="{{ text }}" 
+    class="block lg:px-40 group">
+    {{ partial:media/image 
+      :image="image" 
+      wrapperClass=""
+      class="block w-full h-auto"
+      :sizes="['2xl', 'xl', 'lg']" }}
+      {{ if text }}
+        <span class="absolute block pt-10 px-16 lg:px-0 underline underline-offset-4 decoration-[0.08em] decoration-mint group-hover:no-underline">
+          {{ text }} {{ partial:icons/arrow }}
+        </span>
+      {{ /if }}
+    </a>
+</div>
