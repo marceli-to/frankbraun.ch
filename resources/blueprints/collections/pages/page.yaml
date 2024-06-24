@@ -20,6 +20,7 @@ tabs:
             field:
               type: replicator
               display: Inhalte
+              collapse: true
               sets:
                 main_elements:
                   display: Hauptelemente
@@ -43,6 +44,12 @@ tabs:
                       fields:
                         -
                           import: image_container
+                    text_container:
+                      display: Textcontainer
+                      icon: text-formatting-initial-letter
+                      fields:
+                        -
+                          import: text_container
   seo:
     display: SEO
     sections:

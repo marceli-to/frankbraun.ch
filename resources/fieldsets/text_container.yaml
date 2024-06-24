@@ -1,0 +1,16 @@
+title: Textcontainer
+fields:
+  -
+    handle: color
+    field:
+      options:
+        black: Schwarz
+        teal: Grün
+      default: black
+      type: select
+      display: Textfarbe
+  -
+    handle: text
+    field:
+      type: textarea
+      display: Text

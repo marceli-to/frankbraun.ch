@@ -37,6 +37,14 @@ fields:
       width: 50
       if:
         container_type: 'equals double'
+      max_files: 1
+  -
+    handle: one_column
+    field:
+      type: toggle
+      display: '1-spaltig (mobile Geräte)?'
+      if:
+        container_type: 'equals double'
   -
     handle: show_caption
     field:

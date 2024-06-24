@@ -1,0 +1,36 @@
+<div class="max-w-6xl mx-auto relative mb-60 last-of-type:mb-40">
+  {{ if container_type == 'single' }}
+
+    {{ partial:media/image 
+      :image="image" 
+      wrapperClass="block lg:px-40 w-full"
+      class="block w-full h-auto"
+      :sizes="['2xl', 'xl', 'lg']" }}
+
+  {{ elseif container_type == 'double' }}
+  
+      <div class="lg:px-40 w-full {{ if !one_column }} grid grid-cols-2 gap-x-16 {{ else }} md:grid md:grid-cols-2 md:gap-x-16 {{ /if }}">
+        <div class="col-span-1 {{ if one_column }} mb-60 md:mb-0 {{ /if }}">
+          {{ partial:media/image 
+            :image="image_left" 
+            class="block w-full h-full aspect-[284/363] object-cover"
+            :sizes="['2xl', 'xl', 'lg']" }}
+        </div>
+        <div class="col-span-1">
+          {{ partial:media/image 
+            :image="image_right" 
+            class="block w-full h-full aspect-[284/363] object-cover"
+            :sizes="['2xl', 'xl', 'lg']" }}
+        </div>
+      </div>
+
+  {{ /if }}
+
+  {{ if caption && show_caption }}
+    <div class="text-graphite pt-6 flex justify-between absolute left-0 lg:left-40 w-full lg:w-[calc(100%_-_80px)]">
+      <span class="block text-xs lg:text-sm pl-16 lg:pl-0">
+        {{ caption }}
+      </span>
+    </div>
+  {{ /if }}
+</div>

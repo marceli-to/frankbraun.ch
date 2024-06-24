@@ -12,7 +12,7 @@
         <span class="block pl-16 lg:pl-0 underline underline-offset-4 decoration-[0.08em] decoration-mint group-hover:no-underline">
           {{ text }} {{ partial:icons/arrow }}
         </span>
-        {{ if caption }}
+        {{ if caption && show_caption }}
           <span class="hidden lg:block text-xxs pr-16 lg:pr-0">
             {{ caption }}
           </span>
