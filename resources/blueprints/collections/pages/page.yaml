@@ -26,30 +26,34 @@ tabs:
                   display: Hauptelemente
                   icon: addon-boxes-stack
                   sets:
-                    editor:
-                      display: Texteditor
-                      icon: text-formatting-markdown
-                      fields:
-                        -
-                          import: editor
-                    teaser:
-                      display: Bildteaser
-                      icon: text-formatting-image-top
-                      fields:
-                        -
-                          import: teaser
                     image_container:
                       display: Bildcontainer
+                      instructions: 'Container für Bilder (1 oder 2 Spalten)'
                       icon: media-image-picture-orientation
                       fields:
                         -
                           import: image_container
+                    teaser:
+                      display: Bildteaser
+                      instructions: 'Teaser für Startseite'
+                      icon: text-formatting-image-top
+                      fields:
+                        -
+                          import: teaser
                     text_container:
                       display: Textcontainer
+                      instructions: 'Container für Textblock'
                       icon: text-formatting-initial-letter
                       fields:
                         -
                           import: text_container
+                    editor:
+                      display: Texteditor
+                      instructions: 'Texteditor für formatierten Text'
+                      icon: text-formatting-markdown
+                      fields:
+                        -
+                          import: editor
   seo:
     display: SEO
     sections:
