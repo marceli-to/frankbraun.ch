@@ -10,6 +10,7 @@ fields:
     field:
       options:
         privacy: Impressum/Datenschutz
+        contact: Kontakt
       type: select
       display: 'CSS Class'
   -

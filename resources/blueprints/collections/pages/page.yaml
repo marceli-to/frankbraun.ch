@@ -54,6 +54,16 @@ tabs:
                       fields:
                         -
                           import: editor
+                special_elements:
+                  display: Spezialelemente
+                  icon: addon-boxes-stack
+                  sets:
+                    contact:
+                      display: Kontakt
+                      icon: text-formatting-image-top
+                      fields:
+                        -
+                          import: contact
   seo:
     display: SEO
     sections:

@@ -1,0 +1,61 @@
+title: Kontakt
+fields:
+  -
+    handle: image_left
+    field:
+      max_files: 1
+      container: assets
+      type: assets
+      display: 'Bild (links)'
+      width: 50
+  -
+    handle: image_right
+    field:
+      max_files: 1
+      container: assets
+      type: assets
+      display: 'Bild (rechts)'
+      width: 50
+  -
+    handle: show_caption
+    field:
+      type: toggle
+      display: 'Bildlegende?'
+  -
+    handle: caption_image_left
+    field:
+      type: text
+      display: 'Legende (Bild links)'
+      width: 50
+      if:
+        show_caption: 'equals true'
+  -
+    handle: caption_image_right
+    field:
+      type: text
+      display: 'Legende (Bild rechts)'
+      width: 50
+      if:
+        show_caption: 'equals true'
+  -
+    handle: text_left
+    field:
+      buttons:
+        - removeformat
+        - anchor
+      toolbar_mode: floating
+      remove_empty_nodes: true
+      type: bard
+      display: 'Text (links)'
+      width: 50
+  -
+    handle: text_right
+    field:
+      buttons:
+        - removeformat
+        - anchor
+      toolbar_mode: floating
+      remove_empty_nodes: true
+      type: bard
+      display: 'Text (rechts)'
+      width: 50

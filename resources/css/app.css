@@ -45,6 +45,11 @@ body.privacy main a {
   @apply underline underline-offset-4 decoration-[0.08em] decoration-azure hover:no-underline;
 }
 
+body.contact main a {
+  @apply underline underline-offset-4 decoration-[0.08em] decoration-azure hover:no-underline;
+}
+
+
 /* Helpers */
 .nobr {
   @apply whitespace-nowrap;
