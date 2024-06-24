@@ -1,6 +1,7 @@
 <body 
   class="antialiased font-gt-alpina-regular leading-[1.25] text-xs lg:text-sm text-black flex min-h-screen flex-col {{ css_class ?? '' }}" 
-  x-data="{ menu: false }">
+  x-data="{ menu: false, isScrolled: false, prevScrollPos: 0 }"
+  x-init="window.addEventListener('scroll', () => { isScrolled = window.pageYOffset > prevScrollPos; prevScrollPos = window.pageYOffset; })">
   {{ slot:header }}
   {{ slot }}
   {{ slot:footer }}
