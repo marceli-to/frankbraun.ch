@@ -64,6 +64,12 @@ tabs:
                       fields:
                         -
                           import: contact
+                    disruptor:
+                      display: 'Störer (aktuelle Ausstellung)'
+                      icon: alert-warning-exclamation-mark
+                      fields:
+                        -
+                          import: teaser_news
   seo:
     display: SEO
     sections:

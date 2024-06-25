@@ -1,5 +1,9 @@
 {{ collection from="exhibitions" as="exhibition" sort="order" }}
   {{ exhibition }}
-    {{ partial:elements/exhibition }}
+    {{ if is_current }}
+      {{ partial:elements/exhibitions/current }}
+    {{ else }}
+      {{ partial:elements/exhibitions/archive }}
+    {{ /if }}
   {{ /exhibition }}
 {{ /collection }}

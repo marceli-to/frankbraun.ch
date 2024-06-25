@@ -1,31 +1,5 @@
-<div class="pt-30 pb-16 lg:pb-40 {{ is_current ? 'bg-mint' : '' }}">
+<div class="pt-30 pb-16 lg:pb-60">
   <article class="max-w-6xl mx-auto px-16 lg:px-40 exhibition">
-  {{ if is_current }}
-    <div class="md:grid md:grid-cols-2 md:gap-x-20">
-      <div class="md:col-span-1 mb-16 md:mb-0">
-        {{ partial:partials/headings/h1 title="{{ title }}" class="text-xl lg:text-4xl mb-5 underline underline-offset-4 decoration-2 decoration-scarlett" }}
-        <div class="max-w-3xl text-sm lg:text-md mb-15 lg:mb-30">
-          {{ date_location | nl2br }}
-        </div>
-        <div class="max-w-3xl text-sm lg:text-md mb-30 lg:mb-50">
-          {{ info | nl2br }}
-        </div>
-        <div class="max-w-3xl text-xs lg:text-sm">
-          {{ text }}
-        </div>
-      </div>
-      <div class="md:col-span-1">
-        {{ partial:media/image 
-          :image="image_landscape" 
-          class="block md:hidden w-full h-auto"
-          :sizes="['2xl', 'xl', 'lg']" }}
-        {{ partial:media/image 
-          :image="image_portrait" 
-          class="hidden md:block w-full h-auto"
-          :sizes="['2xl', 'xl', 'lg']" }}
-      </div>
-    </div>
-  {{ else }}
     {{ partial:partials/headings/h1 title="{{ title }}" class="text-xl lg:text-4xl mb-5 underline underline-offset-4 decoration-2 decoration-scarlett" }}
     <div class="max-w-3xl mb-30">
       {{ info | nl2br }}
@@ -66,6 +40,5 @@
         {{ /images_right }}
       </div>
     </div>
-  {{ /if }}
-</article>
+  </article>
 </div>

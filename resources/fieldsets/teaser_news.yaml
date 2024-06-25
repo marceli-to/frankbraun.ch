@@ -1,10 +1,10 @@
-title: 'Teaser Aktuell'
+title: 'Störer (aktuelle Ausstellung)'
 fields:
   -
-    handle: news_article
+    handle: exhibition
     field:
       max_items: 1
       collections:
-        - news
+        - exhibitions
       type: entries
-      display: Artikel
+      display: Ausstellung
