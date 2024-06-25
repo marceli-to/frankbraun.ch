@@ -3,7 +3,7 @@
   x-data="{ menu: false, isScrolled: false, prevScrollPos: 0, headerVisible: true }"
   x-init="window.addEventListener('scroll', () => { 
     if (!menu) {
-      isScrolled = window.pageYOffset > prevScrollPos && window.pageYOffset > 250;
+      isScrolled = window.pageYOffset > prevScrollPos && window.pageYOffset > 150;
       headerVisible = !isScrolled || window.pageYOffset < 50;
       prevScrollPos = window.pageYOffset;
     }
