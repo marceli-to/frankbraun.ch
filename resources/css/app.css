@@ -28,7 +28,7 @@ main ul p {
 }
 
 footer a {
-  @apply underline underline-offset-4 decoration-[0.08em] decoration-azure hover:no-underline;
+  @apply underline underline-offset-4 decoration-2 decoration-azure hover:no-underline;
 }
 
 /* Specific styles */
@@ -42,13 +42,20 @@ body.privacy main h3 {
 }
 
 body.privacy main a {
-  @apply underline underline-offset-4 decoration-[0.08em] decoration-azure hover:no-underline;
+  @apply underline underline-offset-4 decoration-2 decoration-azure hover:no-underline;
 }
 
 body.contact main a {
-  @apply underline underline-offset-4 decoration-[0.08em] decoration-azure hover:no-underline;
+  @apply underline underline-offset-4 decoration-2 decoration-azure hover:no-underline;
 }
 
+.exhibition a {
+  @apply underline underline-offset-4 decoration-2 decoration-azure hover:no-underline;
+}
+
+.exhibition p {
+  @apply mb-15 lg:mb-30;
+}
 
 /* Helpers */
 .nobr {

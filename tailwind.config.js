@@ -40,7 +40,7 @@ export default {
       },
 
       fontSize: {
-        'xxs': '0.9375rem',   // 15px
+        'xxs': '0.9375rem',    // 15px
         'xs':  '1.25rem',      // 20px
         'sm':  '1.5625rem',    // 25px
         'md':  '1.875rem',     // 30px
