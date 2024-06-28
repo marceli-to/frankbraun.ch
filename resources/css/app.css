@@ -82,10 +82,14 @@ body.exterior main {
 
 .menu-open, 
 .menu-open body {
-  @apply overflow-hidden;
+  @apply !overflow-hidden;
 }
 
 .menu-open main, 
 .menu-open footer {
   @apply !hidden;
+}
+
+.menu-open header {
+  @apply !bg-red-200
 }
