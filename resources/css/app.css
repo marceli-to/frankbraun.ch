@@ -80,5 +80,5 @@ body.exterior main {
 }
 
 .menu-open {
-  @apply !overflow-y-hidden sm:!overflow-y-auto;
+  @apply !overflow-y-hidden sm:!overflow-y-auto !max-h-[100dvh] sm:!max-h-none;
 }
