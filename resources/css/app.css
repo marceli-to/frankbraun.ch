@@ -83,6 +83,11 @@ body.exterior main {
   @apply !overflow-y-hidden sm:!overflow-y-auto;
 }
 
+.menu-open main,
+.menu-open footer {
+  @apply !hidden;
+}
+
 .menu-open header {
-  @apply !bg-red-200
+  @apply !bg-green-200
 }
