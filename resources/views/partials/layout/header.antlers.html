@@ -1,14 +1,20 @@
 <header 
-  class="fixed left-0 top-0 w-full h-72 lg:h-130 bg-white z-50 transition-opacity duration-200"
+  class="fixed left-0 top-0 w-full h-72 lg:h-115 bg-white z-50 transition-opacity duration-200"
   :class="{ '!opacity-0 pointer-events-none': !headerVisible && !menu, 'opacity-100': headerVisible || menu }"
 >
-  <div class="flex items-center justify-between w-full p-16 lg:p-40 max-w-6xl mx-auto">
+  <div class="flex items-center justify-between w-full p-16 lg:px-40 lg:pt-30 lg:pb-35 max-w-6xl mx-auto">
     <a 
       href="/" 
       title="Frank Braun"
-      class="block underline underline-offset-4 decoration-2 decoration-scarlett">
-      {{ partial:headings/h1 title="{{ title }}" class="text-lg lg:text-2xl leading-none" }}
+      class="block underline underline-offset-4 decoration-3 decoration-skip-ink-none decoration-scarlett"
+      x-show="menu">
+      {{ partial:headings/h1 title="Frank Braun" class="text-lg lg:text-2xl leading-none" }}
     </a>
+    <h1 
+      class="text-lg lg:text-2xl leading-none underline underline-offset-4 decoration-3 decoration-skip-ink-none decoration-scarlett"
+      x-show="!menu">
+      {{ title }}
+    </h1>
     {{ partial:menu/button }}
   </div>
 </header>

@@ -6,6 +6,10 @@
 
 [x-cloak] { display: none !important; }
 
+.decoration-skip-ink-none {
+  text-decoration-skip-ink: none;
+}
+
 /* Global styles */
 main {
   @apply flex-1;
@@ -28,7 +32,8 @@ main ul p {
 }
 
 footer a {
-  @apply underline underline-offset-4 decoration-2 decoration-azure hover:no-underline;
+  @apply underline underline-offset-4 decoration-3 decoration-azure hover:no-underline;
+  text-decoration-skip-ink: none;
 }
 
 /* Specific styles */
@@ -42,15 +47,27 @@ body.privacy main h3 {
 }
 
 body.privacy main a {
-  @apply underline underline-offset-4 decoration-2 decoration-azure hover:no-underline;
+  @apply underline underline-offset-4 decoration-3 decoration-azure hover:no-underline;
+  text-decoration-skip-ink: none;
 }
 
 body.contact main a {
-  @apply underline underline-offset-4 decoration-2 decoration-azure hover:no-underline;
+  @apply underline underline-offset-4 decoration-3 decoration-azure hover:no-underline;
+  text-decoration-skip-ink: none;
+}
+
+body.contact main,
+body.exhibitions main {
+  @apply lg:pb-40;
+}
+
+body.exterior main {
+  @apply !bg-snow;
 }
 
 .exhibition a {
-  @apply underline underline-offset-4 decoration-2 decoration-azure hover:no-underline;
+  @apply underline underline-offset-4 decoration-3 decoration-azure hover:no-underline;
+  text-decoration-skip-ink: none;
 }
 
 .exhibition p {

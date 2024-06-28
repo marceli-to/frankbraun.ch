@@ -3,22 +3,27 @@
     <div class="md:grid md:grid-cols-2 md:gap-x-20">
       <div class="md:col-span-1 mb-16 md:mb-0">
         {{ if is_homepage }}
-          <div class="mb-20 lg:mb-40">
+          <div class="mb-20">
             <a href="/ausstellungen">
               Ausstellung ↬
             </a>
           </div>
         {{ /if }}
-        {{ partial:partials/headings/h1 title="{{ title }}" class="text-xl lg:text-4xl mb-5 underline underline-offset-4 decoration-2 decoration-scarlett" }}
-        <div class="max-w-3xl text-sm lg:text-md mb-15 lg:mb-30">
+        {{ partial:partials/headings/h1 title="{{ title }}" class="text-xl lg:text-4xl mb-5 underline underline-offset-4 decoration-3 decoration-skip-ink-none decoration-scarlett" }}
+        <div class="max-w-3xl text-sm lg:text-md mb-15 lg:mb-20">
           {{ date_location | nl2br }}
         </div>
         <div class="max-w-3xl text-sm lg:text-md mb-30 lg:mb-50">
           {{ info | nl2br }}
         </div>
-        <div class="max-w-3xl text-xs lg:text-sm">
+        <div class="max-w-3xl text-xs lg:text-sm mb-20">
           {{ text }}
         </div>
+        {{ if !is_homepage }}
+          <div class="max-w-3xl text-xs lg:text-sm">
+            {{ links }}
+          </div>
+        {{ /if }}
       </div>
       <div class="md:col-span-1">
         {{ partial:media/image 

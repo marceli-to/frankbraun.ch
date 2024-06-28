@@ -11,6 +11,8 @@ fields:
       options:
         privacy: Impressum/Datenschutz
         contact: Kontakt
+        exhibitions: Ausstellungen
+        exterior: Draussen
       type: select
       display: 'CSS Class'
   -

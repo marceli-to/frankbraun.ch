@@ -24,7 +24,12 @@ tabs:
           -
             handle: info
             field:
-              type: textarea
+              buttons:
+                - removeformat
+                - anchor
+              toolbar_mode: floating
+              remove_empty_nodes: true
+              type: bard
               display: Informationen
           -
             handle: text
@@ -38,6 +43,18 @@ tabs:
               type: bard
               display: 'Weitere Informationen'
               container: assets
+              if:
+                is_current: 'equals true'
+          -
+            handle: links
+            field:
+              buttons:
+                - removeformat
+                - anchor
+              toolbar_mode: floating
+              remove_empty_nodes: true
+              type: bard
+              display: Links
               if:
                 is_current: 'equals true'
           -

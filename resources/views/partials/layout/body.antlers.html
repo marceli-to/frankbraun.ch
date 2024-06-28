@@ -1,11 +1,21 @@
 <body 
-  class="antialiased font-gt-alpina-regular leading-[1.25] text-xs lg:text-sm text-black flex min-h-screen flex-col {{ css_class ?? '' }}" 
-  x-data="{ menu: false, isScrolled: false, prevScrollPos: 0, headerVisible: true }"
+  class="antialiased font-gt-alpina-regular leading-[1.25] text-xs lg:text-sm text-black flex min-h-screen flex-col sm:!overflow-y-scroll {{ css_class ?? '' }}"
+  :class="{ 'overflow-y-hidden': menu === true }" 
+  x-data="{ menu: false, isScrolled: false, prevScrollPos: 0, headerVisible: true, scrollUpDistance: 0 }"
   x-init="window.addEventListener('scroll', () => { 
     if (!menu) {
-      isScrolled = window.pageYOffset > prevScrollPos && window.pageYOffset > 150;
-      headerVisible = !isScrolled || window.pageYOffset < 50;
-      prevScrollPos = window.pageYOffset;
+      const currentScrollPos = window.pageYOffset;
+      if (currentScrollPos < prevScrollPos) {
+        scrollUpDistance += prevScrollPos - currentScrollPos;
+        if (scrollUpDistance >= 50) {
+          headerVisible = true;
+        }
+      } else {
+        scrollUpDistance = 0;
+        headerVisible = currentScrollPos < 50;
+      }
+      isScrolled = currentScrollPos > 150;
+      prevScrollPos = currentScrollPos;
     }
   })">
   {{ slot:header }}
