@@ -56,7 +56,7 @@ export default {
       },
 
       textDecorationThickness: {
-        3: '2.5px',
+        3: '3px',
       },
       
       zIndex: {

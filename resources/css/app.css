@@ -79,6 +79,7 @@ body.exterior main {
   @apply whitespace-nowrap;
 }
 
+/* Overflow handling for mobile devices */
 .menu-open {
   @apply !overflow-y-hidden sm:!overflow-y-auto;
 }
@@ -86,8 +87,4 @@ body.exterior main {
 .menu-open main,
 .menu-open footer {
   @apply !hidden sm:!block;
-}
-
-.menu-open header {
-  @apply !bg-blue-200
 }
