@@ -81,5 +81,5 @@ body.exterior main {
 
 .menu-open main, 
 .menu-open footer {
-  @apply !h-0 overflow-hidden;
+  @apply !hidden;
 }
