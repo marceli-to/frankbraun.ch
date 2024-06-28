@@ -85,9 +85,9 @@ body.exterior main {
 
 .menu-open main,
 .menu-open footer {
-  @apply !hidden;
+  @apply !hidden sm:!block;
 }
 
 .menu-open header {
-  @apply !bg-green-200
+  @apply !bg-blue-200
 }
