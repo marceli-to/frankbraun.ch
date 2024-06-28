@@ -79,6 +79,7 @@ body.exterior main {
   @apply whitespace-nowrap;
 }
 
-.menu-open {
-  @apply !overflow-y-hidden sm:!overflow-y-auto !max-h-[100dvh] sm:!max-h-none;
+.menu-open main, 
+.menu-open footer {
+  @apply !hidden sm:!block;
 }
