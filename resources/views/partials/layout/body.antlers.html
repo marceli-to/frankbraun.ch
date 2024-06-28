@@ -1,5 +1,5 @@
 <body 
-  class="antialiased font-gt-alpina-regular leading-[1.25] text-xs lg:text-sm text-black flex min-h-screen flex-col sm:!overflow-y-scroll {{ css_class ?? '' }}"
+  class="antialiased font-gt-alpina-regular leading-[1.25] text-xs lg:text-sm text-black flex min-h-screen flex-col {{ css_class ?? '' }}"
   :class="{ 'overflow-y-hidden': menu === true }" 
   x-data="{ menu: false, isScrolled: false, prevScrollPos: 0, headerVisible: true, scrollUpDistance: 0 }"
   x-init="window.addEventListener('scroll', () => { 

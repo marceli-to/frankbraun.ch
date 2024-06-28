@@ -1,6 +1,6 @@
 <a 
   href="javascript:;" 
-  x-on:click="menu = ! menu" 
+  x-on:click="menu = !menu; $event.target.closest('html').classList.toggle('overflow-y-hidden'); $event.target.closest('html').classList.toggle('sm:!overflow-y-auto')"
   title="Menü anzeigen"
   :class="{ 'is-active': menu === true }"
   class="w-40 h-38 flex justify-center items-center">
