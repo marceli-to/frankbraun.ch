@@ -20,5 +20,6 @@ fields:
       options:
         narrow: 'Schmal (40px)'
         default: 'Normal (60px)'
+      default: default
       type: select
       display: 'Abstand (nach unten)'
