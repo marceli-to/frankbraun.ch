@@ -21,3 +21,13 @@
 {{ if type == 'disruptor' }}
   {{ partial:elements/exhibitions/disruptor }}
 {{ /if }}
+
+{{ if type == 'teaser_current_exhibition' }}
+  {{ collection from="exhibitions" as="exhibition" sort="order" id:is="{{ exhibition }}" }}
+    {{ exhibition }}
+      {{ if is_current }}
+        {{ partial:elements/exhibitions/current }}
+      {{ /if }}
+    {{ /exhibition }}
+  {{ /collection }}
+{{ /if }}

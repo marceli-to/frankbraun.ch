@@ -70,6 +70,12 @@ tabs:
                       fields:
                         -
                           import: teaser_news
+                    teaser_current_exhibition:
+                      display: 'Teaser (aktuelle Ausstellung)'
+                      icon: align-object-center
+                      fields:
+                        -
+                          import: teaser_current_exhibition
   seo:
     display: SEO
     sections:
