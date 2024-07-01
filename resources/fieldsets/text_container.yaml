@@ -14,3 +14,11 @@ fields:
     field:
       type: textarea
       display: Text
+  -
+    handle: margin_bottom
+    field:
+      options:
+        narrow: 'Schmal (40px)'
+        default: 'Normal (60px)'
+      type: select
+      display: 'Abstand (nach unten)'
