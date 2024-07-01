@@ -68,10 +68,6 @@ body.exterior main {
   @apply !bg-snow;
 }
 
-body.images main > div {
-  @apply !mb-40
-}
-
 .exhibition a {
   @apply underline underline-offset-4 decoration-3 decoration-azure hover:no-underline;
   text-decoration-skip-ink: none;
