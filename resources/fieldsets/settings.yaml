@@ -14,6 +14,7 @@ fields:
         contact: Kontakt
         exhibitions: Ausstellungen
         exterior: Draussen
+        images: 'Bilder ohne Legenden'
       type: select
       display: 'CSS Class'
   -
