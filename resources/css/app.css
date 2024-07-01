@@ -42,11 +42,14 @@ body.privacy main section {
 }
 
 body.privacy main h2,
-body.privacy main h3 {
+body.privacy main h3,
+body.imprint main h2,
+body.imprint main h3 {
   @apply mb-5 text-sm lg:text-md;
 }
 
-body.privacy main a {
+body.privacy main a,
+body.imprint main a {
   @apply underline underline-offset-4 decoration-3 decoration-azure hover:no-underline;
   text-decoration-skip-ink: none;
 }

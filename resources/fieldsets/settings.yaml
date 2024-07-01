@@ -9,7 +9,8 @@ fields:
     handle: css_class
     field:
       options:
-        privacy: Impressum/Datenschutz
+        privacy: Datenschutz
+        imprint: Impressum
         contact: Kontakt
         exhibitions: Ausstellungen
         exterior: Draussen
