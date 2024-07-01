@@ -1,4 +1,4 @@
-<div class="max-w-6xl mx-auto relative mb-60">
+<div class="max-w-6xl mx-auto relative {{ !caption ? 'mb-40' : 'mb-60' }}">
   {{ if container_type == 'single' }}
 
     {{ partial:media/image 
