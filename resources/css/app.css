@@ -64,7 +64,8 @@ body.exhibitions main {
   @apply lg:pb-40;
 }
 
-body.exterior main {
+body.exterior main,
+body.opposite main {
   @apply !bg-snow;
 }
 
