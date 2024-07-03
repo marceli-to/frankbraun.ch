@@ -59,10 +59,10 @@ body.contact main a {
   text-decoration-skip-ink: none;
 }
 
-body.contact main,
+/* body.contact main,
 body.exhibitions main {
   @apply lg:pb-40;
-}
+} */
 
 body.exterior main,
 body.opposite main {
