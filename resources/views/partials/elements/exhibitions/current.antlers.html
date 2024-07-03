@@ -4,7 +4,7 @@
       <div class="md:col-span-1 mb-16 md:mb-0">
         {{ if is_homepage }}
           <div class="mb-20">
-            <a href="/ausstellungen">
+            <a href="/ausstellungen" title="Ausstellungen">
               Ausstellung ↬
             </a>
           </div>
@@ -16,24 +16,33 @@
         <div class="max-w-3xl text-sm lg:text-md mb-10 lg:mb-15">
           {{ info | nl2br }}
         </div>
-        <div class="max-w-3xl text-xs lg:text-sm mb-10 lg:mb-15">
-          {{ text }}
-        </div>
         {{ if !is_homepage }}
+          <div class="max-w-3xl text-xs lg:text-sm mb-10 lg:mb-15">
+            {{ text }}
+          </div>
           <div class="max-w-3xl text-xs lg:text-sm">
             {{ links }}
           </div>
         {{ /if }}
       </div>
       <div class="md:col-span-1">
-        {{ partial:media/image 
-          :image="image_landscape" 
-          class="block md:hidden w-full h-auto"
-          :sizes="['2xl', 'xl', 'lg']" }}
-        {{ partial:media/image 
-          :image="image_portrait" 
-          class="hidden md:block w-full h-auto"
-          :sizes="['2xl', 'xl', 'lg']" }}
+        {{ if is_homepage }}
+        <a href="/ausstellungen" title="Ausstellungen">
+          {{ partial:media/image 
+            :image="image_landscape" 
+            class="block w-full h-auto"
+            :sizes="['2xl', 'xl', 'lg']" }}
+          </a>
+        {{ else }}
+          {{ partial:media/image 
+            :image="image_landscape" 
+            class="block md:hidden w-full h-auto"
+            :sizes="['2xl', 'xl', 'lg']" }}
+          {{ partial:media/image 
+            :image="image_portrait" 
+            class="hidden md:block w-full h-auto"
+            :sizes="['2xl', 'xl', 'lg']" }}
+        {{ /if }}
       </div>
     </div>
   </article>
