@@ -19,6 +19,7 @@ fields:
       type: bard
       display: Text
       toolbar_mode: floating
+      container: assets
   -
     handle: margin_bottom
     field:

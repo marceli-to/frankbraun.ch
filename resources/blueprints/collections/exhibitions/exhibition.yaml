@@ -31,6 +31,7 @@ tabs:
               remove_empty_nodes: true
               type: bard
               display: Informationen
+              container: assets
           -
             handle: text
             field:
@@ -57,6 +58,7 @@ tabs:
               display: Links
               if:
                 is_current: 'equals true'
+              container: assets
           -
             handle: image_portrait
             field:
