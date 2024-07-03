@@ -10,7 +10,7 @@
   {{ elseif container_type == 'double' }}
   
       <div class="lg:px-40 w-full {{ if !one_column }} grid grid-cols-2 gap-x-16 {{ else }} md:grid md:grid-cols-2 md:gap-x-16 {{ /if }}">
-        <div class="col-span-1 {{ if one_column }} mb-60 md:mb-0 {{ /if }}">
+        <div class="col-span-1 {{ if one_column }} mb-40 md:mb-0 {{ /if }}">
           {{ partial:media/image 
             :image="image_left" 
             class="block w-full h-full aspect-[284/363] object-cover"
