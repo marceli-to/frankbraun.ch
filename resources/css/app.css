@@ -59,16 +59,12 @@ body.contact main a {
   text-decoration-skip-ink: none;
 }
 
-/* body.contact main,
-body.exhibitions main {
-  @apply lg:pb-40;
-} */
-
 body.exterior main,
 body.opposite main {
   @apply !bg-snow;
 }
 
+.text-container a,
 .exhibition a {
   @apply underline underline-offset-4 decoration-3 decoration-azure hover:no-underline;
   text-decoration-skip-ink: none;
