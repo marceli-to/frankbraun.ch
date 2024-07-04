@@ -6,6 +6,7 @@ fields:
       options:
         black: Schwarz
         teal: Grün
+        azure: Blau
       default: black
       type: select
       display: Textfarbe
