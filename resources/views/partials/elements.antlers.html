@@ -18,9 +18,9 @@
   {{ partial:elements/contact }}
 {{ /if }}
 
-{{# {{ if type == 'disruptor' }}
+{{ if type == 'disruptor' }}
   {{ partial:elements/exhibitions/disruptor }}
-{{ /if }} #}}
+{{ /if }}
 
 {{ if type == 'teaser_current_exhibition' }}
   {{ collection from="exhibitions" as="exhibition" sort="order" id:is="{{ exhibition }}" }}
