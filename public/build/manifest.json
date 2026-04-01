@@ -1,6 +1,6 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-53c806f7.css",
+    "file": "assets/app-86c7f9c0.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
@@ -21,7 +21,7 @@
     "src": "resources/css/fonts/GT-Alpina-Standard-Regular.woff2"
   },
   "resources/js/app.js": {
-    "file": "assets/app-19674a06.js",
+    "file": "assets/app-02731ea7.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   }

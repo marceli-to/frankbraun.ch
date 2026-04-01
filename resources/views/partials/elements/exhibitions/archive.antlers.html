@@ -11,7 +11,7 @@
         {{ images_left }}
           <div class="relative mb-40 last-of-type:mb-0">
           {{ if lightbox }}
-            <a href="{{ glide:image preset="2xl" }}" data-fancybox="{{ slug }}">
+            <a href="{{ glide:image preset="2xl" }}" data-fancybox="{{ slug }}" {{ if image:alt }} data-caption="{{ image:alt }}"{{ /if }}>
               {{ partial:media/image
                 :image="image"
                 class="block w-full h-auto"
@@ -37,7 +37,7 @@
         {{ images_right }}
           <div class="relative mb-40 lg:last-of-type:mb-0">
           {{ if lightbox }}
-            <a href="{{ glide:image preset="2xl" }}" data-fancybox="{{ slug }}">
+            <a href="{{ glide:image preset="2xl" }}" data-fancybox="{{ slug }}" {{ if caption }} data-title="{{ caption }}"{{ /if }}>
               {{ partial:media/image
                 :image="image"
                 class="block w-full h-auto"

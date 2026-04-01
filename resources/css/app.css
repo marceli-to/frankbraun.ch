@@ -81,8 +81,13 @@ body.opposite main {
 }
 
 /* Fancybox viewport */
-.fancybox__viewport {
+.f-panzoom__content {
   @apply p-40 lg:p-80;
+}
+
+/* Fancybox caption */
+.f-caption {
+  @apply text-center text-xxxs lg:text-xs !text-black py-10 lg:py-20;
 }
 
 /* Fancybox custom buttons */

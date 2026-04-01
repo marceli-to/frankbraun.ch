@@ -19,6 +19,9 @@ Fancybox.bind('[data-fancybox]', {
     Thumbs: false,
     Arrows: false,
   },
+  caption: function(fancybox, slide) {
+    return slide.triggerEl?.dataset?.caption || '';
+  },
   on: {
     ready: (fancybox) => {
       const container = fancybox.getContainer();
