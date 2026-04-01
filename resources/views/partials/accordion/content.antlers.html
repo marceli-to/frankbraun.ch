@@ -1,0 +1,8 @@
+<div
+  x-show="open"
+  {{ unless open }}
+    x-cloak
+  {{ /unless }}
+  class="overflow-hidden {{ class }}">
+  {{ slot }}
+</div>

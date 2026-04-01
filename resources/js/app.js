@@ -7,3 +7,8 @@ window.Alpine = Alpine
 Alpine.start();
 
 import './bootstrap';
+
+/**
+ * Fancybox
+ */
+import './modules/fancybox';

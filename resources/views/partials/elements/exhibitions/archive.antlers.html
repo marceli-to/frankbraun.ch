@@ -1,9 +1,5 @@
-<div class="pt-30 pb-16 lg:pb-30 last-of-type:!pb-0">
-  <article class="max-w-6xl mx-auto px-16 lg:px-40 exhibition">
-    <div class="mb-20">
-      Vergangene Ausstellung
-    </div>
-    {{ partial:partials/headings/h1 title="{{ title }}" class="text-xl lg:text-4xl leading-[1em] mb-10 underline underline-offset-4 decoration-3 decoration-skip-ink-none decoration-scarlett" }}
+<div class="pb-16 lg:pb-30">
+  <article class="exhibition">
     <div class="max-w-3xl text-sm lg:text-md mb-10 lg:mb-15">
       {{ date_location | nl2br }}
     </div>
@@ -14,10 +10,19 @@
       <div class="md:col-span-1 mb-40 md:mb-0">
         {{ images_left }}
           <div class="relative mb-40 last-of-type:mb-0">
-          {{ partial:media/image 
-            :image="image" 
-            class="block w-full h-auto"
-            :sizes="['2xl', 'xl', 'lg']" }}
+          {{ if lightbox }}
+            <a href="{{ glide:image preset="2xl" }}" data-fancybox="{{ slug }}">
+              {{ partial:media/image
+                :image="image"
+                class="block w-full h-auto"
+                :sizes="['2xl', 'xl', 'lg']" }}
+            </a>
+          {{ else }}
+            {{ partial:media/image
+              :image="image"
+              class="block w-full h-auto"
+              :sizes="['2xl', 'xl', 'lg']" }}
+          {{ /if }}
             {{ if caption && show_caption }}
               <div class="text-graphite pt-6 flex justify-between absolute left-0">
                 <span class="block text-xxxs lg:text-xs">
@@ -31,10 +36,19 @@
       <div class="md:col-span-1">
         {{ images_right }}
           <div class="relative mb-40 lg:last-of-type:mb-0">
-            {{ partial:media/image 
-              :image="image" 
+          {{ if lightbox }}
+            <a href="{{ glide:image preset="2xl" }}" data-fancybox="{{ slug }}">
+              {{ partial:media/image
+                :image="image"
+                class="block w-full h-auto"
+                :sizes="['2xl', 'xl', 'lg']" }}
+            </a>
+          {{ else }}
+            {{ partial:media/image
+              :image="image"
               class="block w-full h-auto"
               :sizes="['2xl', 'xl', 'lg']" }}
+          {{ /if }}
               {{ if caption && show_caption }}
                 <div class="text-graphite pt-6 flex justify-between absolute left-0">
                   <span class="block text-xxxs lg:text-xs">

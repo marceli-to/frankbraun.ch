@@ -1,0 +1,14 @@
+<button
+  @click="open = !open"
+  class="flex items-center justify-between w-full text-left cursor-pointer {{ class }}"
+  :aria-expanded="open">
+
+  <span>
+    {{ slot }}
+  </span>
+
+  <div class="shrink-0 transition-transform duration-300" :class="open ? 'rotate-180' : ''">
+    {{ partial:icons/chevron class="w-32 lg:w-40 h-auto" }}
+  </div>
+
+</button>

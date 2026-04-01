@@ -1,4 +1,5 @@
 @import "typo/webfonts.css";
+@import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
 @tailwind base;
 @tailwind components;
@@ -72,6 +73,50 @@ body.opposite main {
 
 .exhibition p {
   @apply mb-15 lg:mb-30;
+}
+
+/* Fancybox backdrop */
+.fancybox__backdrop {
+  @apply bg-mint/90;
+}
+
+/* Fancybox viewport */
+.fancybox__viewport {
+  @apply p-40 lg:p-80;
+}
+
+/* Fancybox custom buttons */
+.fancybox-custom-close,
+.fancybox-custom-prev,
+.fancybox-custom-next {
+  @apply fixed cursor-pointer bg-transparent border-0 p-0;
+  z-index: 99999;
+}
+
+.fancybox-custom-close {
+  @apply top-16 right-16 lg:top-20 lg:right-20;
+}
+
+.fancybox-custom-prev,
+.fancybox-custom-next {
+  @apply top-1/2 -translate-y-1/2;
+}
+
+.fancybox-custom-prev {
+  @apply left-16 lg:left-20;
+}
+
+.fancybox-custom-next {
+  @apply right-16 lg:right-20;
+}
+
+.fancybox-custom-close svg {
+  @apply w-24 h-auto lg:w-40;
+}
+
+.fancybox-custom-prev svg,
+.fancybox-custom-next svg {
+  @apply w-24 h-auto lg:w-40;
 }
 
 /* Helpers */
