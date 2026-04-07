@@ -4,6 +4,12 @@ const closeSvg = '<svg width="43" height="43" viewBox="0 0 43 43" fill="none" xm
 const prevSvg = '<svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M30.5 3L12 21.5L30.5 40" stroke="#E63033" stroke-width="3.4" stroke-linecap="butt" stroke-linejoin="miter"/></svg>';
 const nextSvg = '<svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3L30.5 21.5L12 40" stroke="#E63033" stroke-width="3.4" stroke-linecap="butt" stroke-linejoin="miter"/></svg>';
 
+const MOBILE_BREAKPOINT = 640;
+
+function isMobile() {
+  return window.innerWidth < MOBILE_BREAKPOINT;
+}
+
 function createButton(html, className, onClick) {
   const btn = document.createElement('button');
   btn.innerHTML = html;
@@ -12,31 +18,57 @@ function createButton(html, className, onClick) {
   return btn;
 }
 
-Fancybox.bind('[data-fancybox]', {
-  closeButton: false,
-  Carousel: {
-    Toolbar: false,
-    Thumbs: false,
-    Arrows: false,
-  },
-  caption: function(fancybox, slide) {
-    return slide.triggerEl?.dataset?.caption || '';
-  },
-  on: {
-    ready: (fancybox) => {
-      const container = fancybox.getContainer();
-
-      container.appendChild(
-        createButton(closeSvg, 'fancybox-custom-close', () => Fancybox.close())
-      );
-
-      container.appendChild(
-        createButton(prevSvg, 'fancybox-custom-prev', () => fancybox.getCarousel().prev())
-      );
-
-      container.appendChild(
-        createButton(nextSvg, 'fancybox-custom-next', () => fancybox.getCarousel().next())
-      );
+function initFancybox() {
+  Fancybox.bind('[data-fancybox]', {
+    showClass: false,
+    hideClass: false,
+    zoomEffect: false,
+    fadeEffect: false,
+    closeButton: false,
+    Carousel: {
+      Toolbar: false,
+      Thumbs: false,
+      Arrows: false,
     },
-  },
+    caption: function(fancybox, slide) {
+      return slide.triggerEl?.dataset?.caption || '';
+    },
+    on: {
+      ready: (fancybox) => {
+        const container = fancybox.getContainer();
+
+        container.appendChild(
+          createButton(closeSvg, 'fancybox-custom-close', () => Fancybox.close())
+        );
+
+        container.appendChild(
+          createButton(prevSvg, 'fancybox-custom-prev', () => fancybox.getCarousel().prev())
+        );
+
+        container.appendChild(
+          createButton(nextSvg, 'fancybox-custom-next', () => fancybox.getCarousel().next())
+        );
+      },
+    },
+  });
+}
+
+function destroyFancybox() {
+  Fancybox.unbind('[data-fancybox]');
+  Fancybox.close();
+}
+
+// Init on load (desktop only)
+if (!isMobile()) {
+  initFancybox();
+}
+
+// Toggle on resize
+window.addEventListener('resize', () => {
+  if (isMobile()) {
+    destroyFancybox();
+  } else {
+    destroyFancybox();
+    initFancybox();
+  }
 });

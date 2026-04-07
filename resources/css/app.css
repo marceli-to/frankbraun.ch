@@ -75,9 +75,14 @@ body.opposite main {
   @apply mb-15 lg:mb-30;
 }
 
+/* Disable lightbox links on mobile */
+[data-fancybox] {
+  @apply pointer-events-none sm:pointer-events-auto;
+}
+
 /* Fancybox backdrop */
 .fancybox__backdrop {
-  @apply bg-mint/90;
+  @apply bg-mist;
 }
 
 /* Fancybox viewport */
