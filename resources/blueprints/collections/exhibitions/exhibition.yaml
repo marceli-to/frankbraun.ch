@@ -9,6 +9,15 @@ tabs:
             field:
               type: toggle
               display: 'Aktuell?'
+              width: 50
+          -
+            handle: is_open
+            field:
+              type: toggle
+              display: Aufgeklappt
+              width: 50
+              unless:
+                is_current: 'equals true'
           -
             handle: title
             field:

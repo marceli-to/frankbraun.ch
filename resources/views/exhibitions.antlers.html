@@ -13,7 +13,7 @@
   {{ collection from="exhibitions" as="exhibition" sort="order" }}
     {{ exhibition }}
       {{ unless is_current }}
-        {{ partial:accordion/item }}
+        {{ partial:accordion/item :open="is_open" }}
           {{ partial:accordion/button class="py-16 lg:py-20" }}
             {{ partial:partials/headings/h1 title="{{ title }}" class="text-xl lg:text-4xl leading-[1em] mb-10 underline underline-offset-4 decoration-3 decoration-skip-ink-none decoration-scarlett" }}
           {{ /partial:accordion/button }}
